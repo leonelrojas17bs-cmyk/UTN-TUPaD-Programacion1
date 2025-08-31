@@ -1,0 +1,106 @@
+#ejercicio 1
+edad = int(input("ingrese su edad:"))
+if edad >= 18:
+    print("eres mayor de edad")
+#ejercicio 2
+calificacion = int(input("ingrese su calificacion:"))
+if calificacion >= 6:
+    print("aprobado")
+else:
+    print("desaprobado")
+#ejercicio 3
+numero = int(input("ingrese un numero par"))
+if numero % 2 == 0:
+    print("el numero es par")
+else:
+    print("porfavor ingrese un numero par")
+#ejercicio 4
+edad = int(input("Ingrese su edad: "))
+if edad < 12:
+    print("Niño/a")
+elif edad < 18:
+    print("Adolescente")
+elif edad < 30:
+    print("Adulto/a joven")
+else:
+    print("Adulto/a")
+#ejercicio 5
+contraseña = str(input("ingrese una contraseña de 8 a 14 caracteres:"))
+if 8 <= len(contraseña) <= 14:
+    print("contraseña valida")
+else:
+    print("contraseña invalida")
+#ejercicio 6
+from statistics import mode, median, mean
+import random 
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+media = mean(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+moda = mode(numeros_aleatorios)
+
+print(f"Media: {media}")
+print(f"Mediana: {mediana}")
+print(f"Moda: {moda}")
+
+if media > mediana and mediana > moda:
+    print("Sesgo positivo o a la derecha")
+elif media < mediana and mediana < moda:
+    print("Sesgo negativo o a la izquierda")
+elif media == mediana and mediana == moda:
+    print("Sin sesgo")
+#ejercicio 7
+def es_vocal(caracter):
+    return caracter.lower() in "aeiou"
+
+frase = input("Ingrese una frase: ")
+if len(frase) > 0 and es_vocal(frase[-1]):
+    print(f"{frase}!")
+else:
+    print(f"{frase}")
+#ejercicio 8
+nombre = str(input("ingrese su nombre:"))
+opcion = int(input("Ingrese el número 1, 2 o 3 según la opción que desee:\n1. Nombre en mayúsculas\n2. Nombre en minúsculas\n3. Nombre con la primera letra mayúscula\nOpción: "))
+if opcion == 1:
+    print(nombre.upper())
+elif opcion == 2:
+    print(nombre.lower())
+elif opcion == 3:
+    print(nombre.capitalize())
+#ejercicio 9
+magnitud = float(input("Ingrese la magnitud del terremoto: "))
+if magnitud < 3:
+    print("Muy leve (imperceptible)")
+elif magnitud < 4:
+    print("Leve (ligeramente perceptible)")
+elif magnitud < 5:
+    print("Moderado (sentido por personas, pero generalmente no causa daños)")
+elif magnitud < 6:
+    print("Fuerte (puede causar daños en estructuras débiles)")
+elif magnitud < 7:
+    print("Muy Fuerte (puede causar daños significativos)")
+else:
+    print("Extremo (puede causar graves daños a gran escala)")
+#ejercicio 10
+hemisferio = input("Ingrese el hemisferio (Norte/Sur): ").strip().lower()
+if hemisferio == "norte":
+    mes = int(input("ingrese el mes (1-12): "))
+    dia = int(input("ingrese el dia (1-31): "))
+    if mes >= 12 and dia >= 21 or mes <= 3 and dia <= 20:
+        print("Es invierno")
+    elif mes >= 3 and dia >= 21 or mes <= 6 and dia <= 20:
+        print("Es primavera")
+    elif mes >= 6 and dia >= 21 or mes <= 9 and dia <= 20:
+        print("Es verano")
+    elif mes >= 9 and dia >= 21 or mes <= 12 and dia <= 20:
+        print("Es otoño")
+elif hemisferio == "sur":
+    mes = int(input("ingrese el mes (1-12): "))
+    dia = int(input("ingrese el dia (1-31): "))
+    if mes >= 6 and dia >= 21 or mes <= 9 and dia <= 20:
+        print("Es invierno")
+    elif mes >= 9 and dia >= 21 or mes <= 12 and dia <= 20:
+        print("Es primavera")
+    elif mes >= 12 and dia >= 21 or mes <= 3 and dia <= 20:
+        print("Es verano")
+    elif mes >= 3 and dia >= 21 or mes <= 6 and dia <= 20:
+        print("Es otoño")
