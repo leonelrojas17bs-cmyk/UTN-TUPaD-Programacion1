@@ -162,7 +162,7 @@ while True:
             print("Debe ingresar un número de la lista")
 
 #EJERCICIO7
-agrenda = {
+agenda = {
     ("lunes", "10:00"): "Reuníon",
     ("martes", "13:00"): "Trabajo",
     ("miercoles", "20:00"): "Doctor",
